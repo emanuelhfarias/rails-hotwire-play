@@ -31,3 +31,5 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "turbo-rails", "~> 0.7.12"
