@@ -5,6 +5,14 @@
   <%= form.submit 'Go' %>
 <% end %>
 
+<turbo-stream action="append" target="messages">
+  <template>
+    <div id="message_1">
+      The content of the message.
+    </div>
+  </template>
+</turbo-stream>
+
 <br />
 
 <%= link_to 'Home', root_path %>
