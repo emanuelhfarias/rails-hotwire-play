@@ -1,18 +1,15 @@
 <h1>Contact</h1>
 
-<%= form_with do |form| %>
-  <p>content</p>
-  <%= form.submit 'Go' %>
+<%= turbo_frame_tag "messages" do %>
+  <%= form_with do |form| %>
+    <%= form.submit 'Go' %>
+  <% end %>
+
+  <br />
+
+  Default frame loaded
 <% end %>
 
-<turbo-stream action="append" target="messages">
-  <template>
-    <div id="message_1">
-      The content of the message.
-    </div>
-  </template>
-</turbo-stream>
-
-<br />
+<br /><br />
 
 <%= link_to 'Home', root_path %>
